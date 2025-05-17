@@ -51,7 +51,13 @@
 
     function hideInfo(id) {
         const card = cards.find(c => c.id === id);
-        
+        if (card) {
+            card.info = "";
+            renderCards();
+        }
+    }
+
+    renderCards();
 </script>
 
 </body>
