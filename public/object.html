@@ -35,3 +35,10 @@
     function renderCards() {
         const container = document.getElementById("cardContainer");
         container.innerHTML = "";
+
+        cards.forEach(card => {
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "bg-white p-4 rounded-lg shadow-lg flex flex-col items-center";
+            cardDiv.innerHTML = `
+                <img src="${card.imgUrl}" alt="${card.name}" class="w-32 h-32 object-cover rounded-full mb-3">
+                
